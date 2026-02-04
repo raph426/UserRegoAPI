@@ -5,7 +5,7 @@ edition = "2024"
 
 [dependencies]
 axum = "0.8.8"
-jsonwebtoken = "10.3.0"
+jsonwebtoken = { version = "10.3.0", features = ["rust_crypto"] }
 serde = "1.0.228"
 serde_derive = "1.0.228"
 tokio = { version = "1.49.0", features = ["macros", "rt-multi-thread"] }
