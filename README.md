@@ -8,7 +8,7 @@ This is a user registration API programmed and built in Rust.
 - uses Tokio crate for asynchronous capabilities
 - Routes using Axum Router
 
-## WARNING
+## WARNING !
 - passwords are currently stored in plaintext locally, use at your own risk
 - secret key used to sign tokens is not secure and hard-coded
 
