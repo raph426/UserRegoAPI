@@ -10,7 +10,7 @@ This is a user registration API programmed and built in Rust.
 
 ## WARNING
 - passwords are currently stored in plaintext locally, use at your own risk
-- key used to sign tokens is not secure
+- secret key used to sign tokens is not secure and hard-coded
 
 ## project structure
 ```graphsql
