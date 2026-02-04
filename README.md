@@ -8,14 +8,18 @@ This is a user registration API programmed and built in Rust.
 - uses Tokio crate for asynchronous capabilities
 - Routes using Axum Router
 
+## WARNING
+- passwords are currently stored in plaintext locally, use at your own risk
+- key used to sign tokens is not secure
+
 ## project structure
 ```graphsql
 src/
 |-main.rs     # entrypoint
 |-models.rs   # define data structures
-|-handlers.rs #
-|-state.rs
-|-auth.rs
+|-handlers.rs # handles HTTP register fn
+|-state.rs    # appstate
+|-auth.rs     # authentication
 ```
 
 ## how to build
@@ -43,7 +47,7 @@ cargo run
 cargo test
 ```
 
-## usage
+## example usage
 
 ### registering a new user ( w/ curl )
 
