@@ -22,7 +22,7 @@ src/
 |-auth.rs     # authentication
 ```
 
-## how to build
+## how to build (linux/bash)
 
 ### prerequisites
 - rustc and cargo 1.93.0
