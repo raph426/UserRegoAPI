@@ -3,13 +3,12 @@
 This is a user registration API programmed and built in Rust.
 
 ## Features
-- registers users with username and password
-- generate JSONwebtokens for authentication
-- uses Tokio crate for asynchronous capabilities
+- Registers users using username and password
+- Generates and returns JWT (JSON Web Token) for sessionless authentication
 - Routes using Axum Router
 
 ## WARNING !
-- passwords are currently stored in plaintext locally, use at your own risk
+- Passwords are locally stored in plaintext during runtime, use at your own risk
 
 ## Project structure
 ```graphsql
@@ -38,7 +37,7 @@ Create your own .env file in repo's root folder. This is needed to store the sec
 
 Generate/create your own secret key and assign it to a variable called ' SECRET_KEY '
 
-`SECRET_KEY = "<your secret key"`
+`SECRET_KEY = "<your secret key>"`
 
 ### Build and run
 
