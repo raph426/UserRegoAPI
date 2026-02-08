@@ -8,11 +8,22 @@ use axum::{Router, routing::post};
 use state::AppState;
 use tower_http::trace::TraceLayer;
 
-// MAIN FN
+// inject secret-key variable from .env file in root folder
+use dotenvy::dotenv;
+use std::env;
+
+// MAIN -----------------------------------------
 #[tokio::main]
 async fn main() {
+    dotenv().ok();
+
+    //value is refutable so let else has to be used so rustc wont complain lol
+    let Ok(secret) = env::var("SECRET_KEY") else {
+        return;
+    };
+
     //initialise shared appstate
-    let state = AppState::new("secret-key".to_string());
+    let state = AppState::new(secret);
 
     //build axum router
     let app = Router::new()
