@@ -5,7 +5,6 @@ This is a user registration API programmed and built in Rust.
 ## Features
 - Registers users using username and password
 - Generates and returns JWT (JSON Web Token) for sessionless authentication
-- Routes using Axum Router
 
 ## WARNING !
 - Passwords are locally stored in plaintext during runtime, use at your own risk
