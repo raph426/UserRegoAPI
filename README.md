@@ -2,7 +2,7 @@
 
 This is a user registration API programmed and built in Rust.
 
-## features
+## Features
 - registers users with username and password
 - generate JSONwebtokens for authentication
 - uses Tokio crate for asynchronous capabilities
@@ -10,9 +10,8 @@ This is a user registration API programmed and built in Rust.
 
 ## WARNING !
 - passwords are currently stored in plaintext locally, use at your own risk
-- secret key used to sign tokens is not secure and hard-coded
 
-## project structure
+## Project structure
 ```graphsql
 src/
 |-main.rs     # entrypoint
@@ -22,13 +21,13 @@ src/
 |-auth.rs     # authentication
 ```
 
-## how to build (linux/bash)
+## How to build (linux/bash)
 
-### prerequisites
+### Prereqs
 - rustc and cargo 1.93.0
 - (optional) `curl` to test API
 
-### clone repo
+### Clone repo
 ```bash
 git clone https://github.com/raph426/UserRegoAPI.git
 cd user UserRegoAPI
@@ -41,28 +40,28 @@ Generate/create your own secret key and assign it to a variable called ' SECRET_
 
 `SECRET_KEY = "<your secret key"`
 
-### build and run
+### Build and run
 
 ```bash
 cargo build
 cargo run
 ```
 
-### test
+### Test
 
 ```bash
 cargo test
 ```
 
-## example usage
+## Example usage
 
-### registering a new user ( w/ curl )
+### Registering a new user ( w/ curl )
 
 ```bash
 curl -X POST http://127.0.0.1:3000/register -H "Content-Type: application/json" -d '{"username": "reinhard", "pwd": "kircheis488"}'
 ```
 
-expected response:
+Expected response:
 
 ```sh
 {"token": <jwt_token_here>}
