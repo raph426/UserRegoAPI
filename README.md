@@ -34,6 +34,13 @@ git clone https://github.com/raph426/UserRegoAPI.git
 cd user UserRegoAPI
 ```
 
+### Create .env file
+Create your own .env file in repo's root folder. This is needed to store the secret key that will be used in the code. 
+
+Generate/create your own secret key and assign it to a variable called ' SECRET_KEY '
+
+`SECRET_KEY = "<your secret key"`
+
 ### build and run
 
 ```bash
